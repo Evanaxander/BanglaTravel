@@ -1,0 +1,174 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+}
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+}
+.destination-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.tab-active {
+    border-bottom: 3px solid #047857;
+    color: #047857;
+    font-weight: 600;
+}
+.prediction-card {
+    background: linear-gradient(135deg, #f6f8fa 0%, #e9f1f7 100%);
+}
+.modal {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-content {
+    transition: transform 0.3s ease;
+}
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal.active .modal-content {
+    transform: translateY(0);
+}/* Custom styles for BanglaTravel */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Destination Cards */
+.destination-card {
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card img {
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Tabs */
+.tab-btn {
+    position: relative;
+    border: none;
+    background: none;
+    font-weight: 500;
+    color: #6B7280;
+    cursor: pointer;
+}
+
+.tab-btn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #059669;
+    transition: width 0.3s ease;
+}
+
+.tab-btn.tab-active {
+    color: #059669;
+    font-weight: 600;
+}
+
+.tab-btn.tab-active:after {
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Accommodation Cards */
+.accommodation-card {
+    transition: transform 0.3s ease;
+}
+
+.accommodation-card:hover {
+    transform: translateY(-3px);
+}
+
+/* Modal */
+.modal {
+    transition: all 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.active .modal-content {
+    transform: translateY(0);
+}
+
+/* Prediction Cards */
+.prediction-card {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    border-left: 4px solid #059669;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
